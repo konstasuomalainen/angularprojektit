@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class KomponentinnimiComponent {
 
+  komponentinnimiTitle: string;
+
+  constructor() {
+    this.komponentinnimiTitle = "Ensimmäinen harjoitus"
+
+  }
 }
