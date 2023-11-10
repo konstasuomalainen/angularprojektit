@@ -1,0 +1,36 @@
+<div class = "content">
+    <div class = "otsikko">
+<h1 >
+    Kurssipalaute
+</h1>
+<h4>
+    Vastaa kyselyyn siirtämällä slideria ja muista painaa lopuksi Palauta-nappulaa
+</h4>
+</div>
+<div class = "kysely" *ngFor = "let topic of topics">
+    <div class = kysely-otsikko>
+
+    
+    <h2>
+        {{topic.header}}
+    </h2>
+    </div>
+    <div class = kysely-sisältö>
+
+    
+    <mat-slider min="0" max="3" step="1" (input) = "onInputChange($event,topic)">
+        <input matSliderThumb>
+       </mat-slider>
+    </div>
+    <div class = kysely-vastaus>
+    <h3>
+        {{topic.answer}}
+    </h3>
+</div>
+</div>
+
+<div>
+    <button mat-raised-button color="primary">Palauta</button>
+</div>
+</div>
+

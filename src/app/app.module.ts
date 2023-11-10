@@ -7,18 +7,36 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { KomponentinnimiComponent } from './komponentinnimi/komponentinnimi.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSliderModule} from '@angular/material/slider';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { LaskinkomponenttiComponent } from './laskinkomponentti/laskinkomponentti.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { FeedbackComponent } from './feedback/feedback.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    KomponentinnimiComponent
+    KomponentinnimiComponent,
+    PagenotfoundComponent,
+    LaskinkomponenttiComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatSliderModule
+    MatSliderModule,
+    MatSelectModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatGridListModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

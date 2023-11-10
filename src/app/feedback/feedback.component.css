@@ -1,0 +1,21 @@
+.otsikko
+{
+text-align: center;
+}
+.kysely-vastaus
+{
+  margin-left: 10px;  
+  
+}
+.kysely-sisältö
+{
+    margin-left: 10px; 
+}
+.kysely
+{
+    display: flex
+}
+.kysely-otsikko
+{
+    margin-left: 10px;
+}
