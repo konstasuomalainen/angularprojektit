@@ -15,6 +15,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import {MatIconModule} from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { Router, RouterModule } from '@angular/router';
+import {MatMenuModule} from '@angular/material/menu';
+import { EtusivuComponent } from './etusivu/etusivu.component';
+
 
 
 @NgModule({
@@ -23,7 +30,12 @@ import { FeedbackComponent } from './feedback/feedback.component';
     KomponentinnimiComponent,
     PagenotfoundComponent,
     LaskinkomponenttiComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    ToolbarComponent,
+    EtusivuComponent,
+
+   
+
   ],
   imports: [
     BrowserModule,
@@ -35,7 +47,14 @@ import { FeedbackComponent } from './feedback/feedback.component';
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatButtonModule,
+    RouterModule,
+    MatMenuModule
+
+    
     
   ],
   providers: [],

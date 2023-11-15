@@ -23,4 +23,8 @@ export class FeedbackComponent {
     topic.setFeedback(event.target.value);
   }
   
+  OnButtonClick()
+  {
+    
+  }
 }

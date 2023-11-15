@@ -1,0 +1,48 @@
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+}
+
+.toolbar-linkki4 {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.toolbar-linkki1 {
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.toolbar-linkki2 {
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.toolbar-linkki3 {
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.linkki {
+    display: flex;
+    color: #1976d2;
+    text-decoration: none;
+
+}
+
+.linkki:hover {
+    text-decoration: none;
+    color: rgb(0, 238, 255);
+}

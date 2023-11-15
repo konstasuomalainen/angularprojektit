@@ -1,3 +1,6 @@
+import { _isNumberValue } from '@angular/cdk/coercion';
+import { NumberSymbol } from '@angular/common';
+import { STRING_TYPE } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
@@ -12,33 +15,82 @@ import { Component } from '@angular/core';
 export class LaskinkomponenttiComponent {
   result: string;
   
-  x: string;
-  y: string;
+ 
   ratkaisu: string;
   constructor() {
-    this.result = "0"
-    this.x = "0"
-    this.y = ""
+    this.result = ""
+    
     this.ratkaisu = ""
     
   }
   buttons: string[] =
   ['7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '-', 'C', '0', '+', '='];
   
-  addValue(value: string) {
-    
-    
-    if (value == '=') {
-      
-        this.ratkaisu = eval(value)
-        this.result = this.ratkaisu
-      }
-      
-      this.x = "0"
-      this.y = "0"
-      
-    }
-    
   
+
+  addValue(value: any)
+  {
+    
+      if (value >= "0" && value <= "9")
+      {
+      this.ratkaisu = this.ratkaisu + value
+      this.result = value
+      
+      console.log(this.ratkaisu)
+      
+      }
+    
+      else if (value == 'C')
+      {
+       this.result = ""
+       this.ratkaisu = ""
+        console.log(this.ratkaisu)
+
+      }
+      else if (value == '/')
+      {
+        this.ratkaisu = this.ratkaisu + value
+        this.result = value
+        
+        console.log(this.ratkaisu)
+
+      }
+      else if (value == '*')
+      {
+        this.ratkaisu = this.ratkaisu + value
+        this.result = value
+        
+        console.log(this.ratkaisu)
+
+      }
+      else if (value == '-')
+      {
+        this.ratkaisu = this.ratkaisu + value
+        this.result = value
+        
+        console.log(this.ratkaisu)
+
+      }
+      else if (value == '+')
+      {
+        this.ratkaisu = this.ratkaisu + value
+        this.result = value
+        
+        console.log(this.ratkaisu)
+
+      }
+      else if (value == '=')
+      {
+        this.ratkaisu = eval(this.ratkaisu)
+        this.result = this.ratkaisu
+        
+        console.log(this.ratkaisu)
+
+      }
+    
+  }
+    
+      
+    
   
 }

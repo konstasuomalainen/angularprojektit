@@ -2,5 +2,7 @@
 {
     border: 5cm;
     border-color: rgb(44, 130, 221);
-   
+    display: flex;
+    width: 25cm;
+    height: 10cm;
 }

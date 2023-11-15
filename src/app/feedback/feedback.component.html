@@ -6,31 +6,69 @@
 <h4>
     Vastaa kyselyyn siirtämällä slideria ja muista painaa lopuksi Palauta-nappulaa
 </h4>
+
 </div>
+
+<div class="tiedot">
+
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Etunimi</mat-label>
+          <input matInput placeholder="Pekka">
+          
+        </mat-form-field>
+        <mat-form-field class="example-full-width-1">
+            <mat-label>Sukunimi</mat-label>
+              <input matInput placeholder="Pouta" >
+            </mat-form-field>
+        
+      </form>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <mat-label>Kurssin ID:</mat-label>
+            <input matInput placeholder="8198P">
+            
+          </mat-form-field>
+          <mat-form-field class="example-full-width-1">
+              <mat-label>Email (Optional)</mat-label>
+                <input matInput placeholder="Pekka.Pouta@gmail.com" >
+              </mat-form-field>
+    </form>
+</div>
+
+
+
+
+
+
+
+
 <div class = "kysely" *ngFor = "let topic of topics">
     <div class = kysely-otsikko>
 
     
-    <h2>
+    <h2 class = "header-topic">
         {{topic.header}}
     </h2>
     </div>
     <div class = kysely-sisältö>
 
-    
-    <mat-slider min="0" max="3" step="1" (input) = "onInputChange($event,topic)">
+    <div class = "sliderit">
+    <mat-slider class = "slider" min="0" max="3" step="1" (input) = "onInputChange($event,topic)">
         <input matSliderThumb>
        </mat-slider>
     </div>
-    <div class = kysely-vastaus>
-    <h3>
+    </div>
+    <div class = kysely-vastaus-div>
+    <h3 class = "kysely-vastaus">
         {{topic.answer}}
     </h3>
+
 </div>
 </div>
 
-<div>
-    <button mat-raised-button color="primary">Palauta</button>
+<div class="button1">
+    <button (click)="onInputChange" mat-raised-button color="primary">Palauta</button>
 </div>
 </div>
 
