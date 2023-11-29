@@ -1,3 +1,30 @@
 mat-grid-tile {
     background: lightblue;
   }
+.gridlist
+{
+ 
+  width: 10cm;
+}
+.tile
+{
+  border: 1px solid #000000;
+  
+}
+h1
+{
+  text-align: center;
+  border: 3px solid #000000;
+  
+}
+.result
+{
+  text-align: center;
+  border: 1px solid #000000;
+  padding: 1cm;
+}
+.container
+{
+    background-color: white;
+    padding: 10px;
+}

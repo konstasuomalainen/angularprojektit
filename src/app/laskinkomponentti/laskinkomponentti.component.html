@@ -1,7 +1,7 @@
-
+<div class="container">
 <h1>Calculator</h1>
-<mat-grid-list cols="4" >
-    <mat-grid-tile 
+<mat-grid-list class="gridlist" cols="4" >
+    <mat-grid-tile class ="tile" 
     *ngFor="let button of buttons"
  
     >
@@ -10,6 +10,11 @@
     
   </mat-grid-list>
 
-  <h1>{{result}}</h1>
-    
+
+<div>
+<div class="result1">
+<p class = "result">{{result}}<p>
+</div>
+</div>
+</div>
     

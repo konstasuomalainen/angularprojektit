@@ -1,0 +1,51 @@
+.container
+{
+   
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+}
+
+.finnkino
+{
+    width: 30cm;
+    height: 3cm;
+}
+.finnkinoKuvat
+{
+    height: 15cm;
+}
+.kuvat{
+    
+    display: block;
+    object-fit: contain;
+    height: 10cm;
+    margin: auto;
+ 
+    
+    height: 100%;
+  width: 100%;
+
+}
+.kuvadiv
+{
+    border: 3px solid #000000;
+}
+mat-expansion-panel
+{
+    border: 3px solid #000000;
+}
+
+.pikkukuvat
+{
+    height: 2.9cm;
+    
+    
+}
+.pikku
+{
+    border-top: 3px solid #000000;
+    border-left: 3px solid #000000;
+    border-bottom: 3px solid #000000;
+}

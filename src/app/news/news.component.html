@@ -1,0 +1,28 @@
+<mat-accordion *ngFor="let news of cinemaData | async" class = "finnkino1">
+  <div class = "container">
+    <div class = "pikku">
+  <img class = "pikkukuvat" src={{news.ThumbnailURL}}>
+</div>
+<div>
+    <mat-expansion-panel >
+      
+      <mat-expansion-panel-header class = "finnkino">
+        <mat-panel-title>
+            {{news.Title}}
+        </mat-panel-title>
+        <mat-panel-description>
+            Elokuvan esityspäivä: {{news.PublishDate}}
+        </mat-panel-description  >
+      </mat-expansion-panel-header >
+      <p>{{news.HTMLLead}}</p>
+      <div class= "kuvadiv">
+      <img class="kuvat" src={{news.ImageURL}} alt="">
+      </div>
+    </mat-expansion-panel >
+  </div>
+  </div>
+</mat-accordion>
+    
+
+
+    

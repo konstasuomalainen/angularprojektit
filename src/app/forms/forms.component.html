@@ -1,0 +1,136 @@
+<div class="container">
+<div>
+    <h1>
+        Registration Form
+
+    </h1>
+
+
+</div>
+
+
+<div class="tiedot">
+
+        <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Etunimi</mat-label>
+          <input
+          [(ngModel)]="person.firstName" 
+          matInput placeholder="First Name"
+          name ="firstName"
+          #fname = "ngModel"
+          required minlength="2" pattern="[a-zA-Z ]*$">
+          <mat-error *ngIf ="fname.hasError('required')">Enter your first name</mat-error>
+          <mat-error *ngIf ="fname.hasError('pattern')">Must be valid name</mat-error>
+          <mat-error *ngIf ="fname.hasError('minlenght')">Minimum 2 characters</mat-error>
+        </mat-form-field>
+        
+        
+      </form>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Sukunimi</mat-label>
+          <input matInput
+          [(ngModel)]="person.lastName" 
+          matInput placeholder="Last Name"
+          name ="lastName"
+          #lname = "ngModel"
+          required minlength="2" pattern="[a-zA-Z ]*$">
+          <mat-error *ngIf ="lname.hasError('required')">Enter your last name</mat-error>
+          <mat-error *ngIf ="lname.hasError('pattern')">Must be valid name</mat-error>
+          <mat-error *ngIf ="lname.hasError('minlenght')">Minimum 2 characters</mat-error>
+          
+
+        </mat-form-field>
+        
+        
+      </form>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Person ID</mat-label>
+          <input matInput
+          [(ngModel)]="person.Id" 
+          matInput placeholder="Person ID"
+          name ="Id"
+          #id1 = "ngModel"
+          required minlength="10" pattern="^(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])([5-9]\d\+|\d\d-|[01]\dA)\d{3}[\dA-Z]$">
+          <mat-error *ngIf ="id1.hasError('required')">Enter your ID</mat-error>
+          <mat-error *ngIf ="id1.hasError('pattern')">Must be valid ID</mat-error>
+          <mat-error *ngIf ="id1.hasError('minlenght')">Minimum 10 characters</mat-error>
+          
+
+        </mat-form-field>
+        </form>
+        
+      
+    
+        <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input matInput
+        [(ngModel)]="person.eMail" 
+        matInput placeholder="Email"
+        name ="eMail"
+        >
+        
+
+      </mat-form-field>
+        </form>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Username</mat-label>
+          <input matInput
+          [(ngModel)]="person.userName" 
+          matInput placeholder="Username"
+          name ="Username"
+          >
+          
+  
+        </mat-form-field>
+        
+      
+      
+        </form>
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <mat-label>Password</mat-label>
+              <input matInput
+              [(ngModel)]="person.password" 
+              matInput placeholder="Password"
+              name ="Password"
+              #password1 = "ngModel"
+             required minlength="10" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$">
+                <mat-error *ngIf ="password1.hasError('required')">Enter your password</mat-error>
+                <mat-error *ngIf ="password1.hasError('pattern')">You must have letters and numbers</mat-error>
+                <mat-error *ngIf ="password1.hasError('minlenght')">Minimum 10 characters</mat-error>
+              
+      
+            </mat-form-field>
+            
+          
+          
+            </form>
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Confirm Password</mat-label>
+                  <input matInput
+                  [(ngModel)]="person.password" 
+                  matInput placeholder="Password"
+                  name ="Password"
+                  #password2 = "ngModel"
+                  required minlength="10" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"
+                  >
+                  <mat-error *ngIf ="password1.hasError('required')">Enter your password</mat-error>
+                  <mat-error *ngIf ="password1.hasError('pattern')">You must have letters and numbers</mat-error>
+                  <mat-error *ngIf ="password1.hasError('minlenght')">Minimum 10 characters</mat-error>
+                  
+          
+                </mat-form-field>
+                
+              
+              
+                </form>
+
+      
+</div>
+</div>

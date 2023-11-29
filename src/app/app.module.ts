@@ -21,6 +21,18 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { Router, RouterModule } from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
 import { EtusivuComponent } from './etusivu/etusivu.component';
+import { FormsComponent } from './forms/forms.component';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { DataService } from './services/data.service';
+import { NewsComponent } from './news/news.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 
 
 
@@ -33,6 +45,9 @@ import { EtusivuComponent } from './etusivu/etusivu.component';
     FeedbackComponent,
     ToolbarComponent,
     EtusivuComponent,
+    FormsComponent,
+    ReactiveFormsComponent,
+    NewsComponent,
 
    
 
@@ -52,12 +67,22 @@ import { EtusivuComponent } from './etusivu/etusivu.component';
     MatToolbarModule,
     MatButtonModule,
     RouterModule,
-    MatMenuModule
+    MatMenuModule,
+    CommonModule,
+    ReactiveFormsModule,
+    MatCheckboxModule,
+    MatExpansionModule,
+    HttpClientModule
+
+    
+    
 
     
     
   ],
-  providers: [],
+  providers: [DataService
+  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

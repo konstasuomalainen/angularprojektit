@@ -1,0 +1,11 @@
+.example-full-width
+{
+    width: 15cm;
+    margin-top: 10px;
+}
+
+.container
+{
+    background-color: white;
+    padding: 10px;
+}

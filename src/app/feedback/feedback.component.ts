@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Topic } from '../topic';
 
+
 @Component({
   selector: 'app-feedback',
   templateUrl: './feedback.component.html',
@@ -27,4 +28,8 @@ export class FeedbackComponent {
   {
     
   }
+
+  
+
+  
 }

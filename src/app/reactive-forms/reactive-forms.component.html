@@ -1,0 +1,104 @@
+<div class="container">
+<div class = "otsikko1">
+    <p>User Creation Form</p>
+</div>
+<div class="float-container">
+    <div class = "float-child">
+        <div class = "otsikko2">
+    <h2>Create a New Account</h2>
+</div>
+
+
+<div class = "form">
+
+
+<form [formGroup]="profileForm" (ngSubmit)="OnSubmit()" class="example-form">
+    <mat-form-field class="example-full-width">
+        <mat-label>Etunimi</mat-label>
+        <input matInput placeholder="first name" formControlName="firstName">
+        <mat-error *ngIf="firstName?.hasError('required')">Enter your first name</mat-error>
+        <mat-error *ngIf="firstName?.hasError('minlength')">Minimum 2 characters</mat-error>
+        <mat-error *ngIf="firstName?.hasError('pattern')">Must be valid name</mat-error>
+
+
+    </mat-form-field>
+    
+    
+        <mat-form-field class="example-full-width">
+            <mat-label>Sukunimi</mat-label>
+            <input matInput placeholder="last name" formControlName="lastName">
+            <mat-error *ngIf="lastName?.hasError('required')">Enter your last name</mat-error>
+            <mat-error *ngIf="lastName?.hasError('minlenght')">Minimum 2 characters</mat-error>
+            <mat-error *ngIf="lastName?.hasError('pattern')">Must be valid name</mat-error>
+
+
+        </mat-form-field>
+
+
+    
+        <mat-form-field class="example-full-width">
+            <mat-label>Person ID</mat-label>
+            <input matInput placeholder="person ID" formControlName="personID">
+            <mat-error *ngIf="personID?.hasError('required')">Enter your ID</mat-error>
+            <mat-error *ngIf="personID?.hasError('minlength')">Minimum 10 characters</mat-error>
+            <mat-error *ngIf="personID?.hasError('pattern')">Must be valid ID</mat-error>
+
+
+
+        </mat-form-field>
+    
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="email" formControlName="email">
+            <mat-error *ngIf="email?.hasError('required')">Enter your email</mat-error>
+            <mat-error *ngIf="email?.hasError('minlength')">Minimum 3 characters</mat-error>
+            <mat-error *ngIf="email?.hasError('email')">Input valid email</mat-error>
+
+
+        </mat-form-field>
+    
+        <mat-form-field class="example-full-width">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="username" formControlName="userName">
+            <mat-error *ngIf="userName?.hasError('required')">Enter your password</mat-error>
+            <mat-error *ngIf="userName?.hasError('minlength')">Minimum 3 characters</mat-error>
+            <mat-error *ngIf="userName?.hasError('pattern')">You must have letters and numbers</mat-error>
+
+
+        </mat-form-field>
+
+    
+        <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="password" formControlName="passWord">
+            <mat-error *ngIf="passWord?.hasError('required')">Enter your password</mat-error>
+            <mat-error *ngIf="passWord?.hasError('minlength')">Minimum 10 characters</mat-error>
+            <mat-error *ngIf="passWord?.hasError('pattern')">You must have letters and numbers</mat-error>
+
+
+
+        </mat-form-field>
+
+
+
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput placeholder="password confirm" formControlName="passWordConfirm">
+            <mat-error *ngIf="passWordConfirm?.hasError('required')">Enter your password</mat-error>
+            <mat-error *ngIf="passWordConfirm?.hasError('minlength')">Minimum 10 characters</mat-error>
+            <mat-error *ngIf="passWordConfirm?.hasError('pattern')">Password must be the same</mat-error>
+        </mat-form-field>
+        
+        <mat-checkbox formControlName="termsandconditions" class="example-full-width1" required><p class = "example2">Terms and conditions</p>
+            <mat-error *ngIf="termsandconditions?.invalid && termsandconditions?.dirty">Hyväksy ehdot</mat-error>
+        </mat-checkbox>
+
+        <button class = "button" mat-raised-button>Submit</button>
+    </form>
+    
+    
+   </div>
+</div>
+</div>
+</div>

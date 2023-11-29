@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Space Mono:700|Space Mono:400');
+
+body {
+    background-color: #ebe5ea;
+    font-family: 'Space Mono';
+    font-weight: 400;
+  }
+
+.float-container
+{
+    border: 3px solid #fff;
+    padding: 20px;
+    display:flex
+    
+
+}
+.container
+{
+    background-color: white;
+    padding: 10px;
+}
+.otsikko1
+{
+    padding: 0.5cm;
+   
+    font-size: 36px
+}
+.otsikko2
+{
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    border-right: 3px solid #fff;
+    padding: 15px;
+    background-color: #db81a4;
+    
+}
+.float-child
+{
+    
+    padding: 20px;
+
+   
+}
+.example-full-width
+{
+    margin-top: 10px;
+    
+    margin-left: 20px;
+    width: 9cm;
+    padding-bottom: 25px;
+    background-color: #e2e9e3;
+    font-family: 'Space Mono';
+    font-weight: 400;
+    
+}
+
+.example-full-width1
+{
+    
+    
+    margin-left: 10px;
+    width: 9cm;
+    
+}   
+
+.form
+{
+    background-color: #5c474e;
+    width: 10cm;
+    
+}
+.example-form
+{
+    border: 3px solid #fff;
+}
+p
+{
+    color: #000000;
+  
+    text-align: center;
+    font-family: 'Space Mono';
+    font-weight: 400;
+}
+h2
+{
+    color: rgb(0, 0, 0);
+    
+    text-align: center;
+    font-family: 'Space Mono';
+    font-weight: 400;
+}
+.button
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-family: 'Space Mono';
+    font-weight: 400;
+}
+mat-label
+{
+    font-family: 'Space Mono';
+    font-weight: 400;
+}
+.example2
+{
+    font-family: 'Space Mono';
+    font-weight: 400;
+    color: #ffffff;
+   
+}

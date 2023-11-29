@@ -14,12 +14,13 @@ import { Component } from '@angular/core';
   
 export class LaskinkomponenttiComponent {
   result: string;
+  resultPrev: string;
   
  
   ratkaisu: string;
   constructor() {
     this.result = ""
-    
+    this.resultPrev = ""
     this.ratkaisu = ""
     
   }
@@ -34,8 +35,8 @@ export class LaskinkomponenttiComponent {
       if (value >= "0" && value <= "9")
       {
       this.ratkaisu = this.ratkaisu + value
-      this.result = value
-      
+      this.result = this.ratkaisu
+      this.resultPrev = ""
       console.log(this.ratkaisu)
       
       }

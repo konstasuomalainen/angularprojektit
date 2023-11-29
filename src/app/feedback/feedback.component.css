@@ -16,6 +16,11 @@ text-align: center;
     
   
 }
+.container
+{
+    background-color: white;
+    padding: 10px;
+}
 .example-full-width-1
 {
    margin-left: 10px;

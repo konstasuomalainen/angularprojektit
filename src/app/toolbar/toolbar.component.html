@@ -1,39 +1,54 @@
 <div>
-<mat-toolbar class = "toolbar">
+  <mat-toolbar class="toolbar">
     <button mat-button [matMenuTriggerFor]="menu">
       <mat-icon>menu</mat-icon>
-      <mat-menu class = "menu-sisältö" #menu="matMenu">
+      <mat-menu class="menu-sisältö" #menu="matMenu">
         <div class="sisältö">
-        <div class ="toolbar-linkki4">
-            <a class = "linkki" routerLink="/etusivu" routerLinkActive="active">
-                Etusivu
-                </a>
-              </div>
-        <div class ="toolbar-linkki1">
-          <a class = "linkki" routerLink="/laskinkomponentti" routerLinkActive="active">
-          Laskin
+          <div class="toolbar-linkki">
+            <a class="linkki" routerLink="/etusivu" routerLinkActive="active">
+              Etusivu
+            </a>
+          </div>
+          <div class="toolbar-linkki">
+            <a class="linkki" routerLink="/laskinkomponentti" routerLinkActive="active">
+              Laskin
+            </a>
+          </div>
+          <div class="toolbar-linkki">
+            <a class="linkki" routerLink="/kuva" routerLinkActive="active">
+              Kuva-karuselli
+            </a>
+          </div>
+          <div class="toolbar-linkki">
+            <a class="linkki" routerLink="/feedback" routerLinkActive="active">
+              Feedback
+            </a>
+          </div>
+
+        </div>
+        <div class="toolbar-linkki">
+          <a class="linkki" routerLink="/forms" routerLinkActive="active">
+            Forms
           </a>
         </div>
-        <div class ="toolbar-linkki2">
-          <a  class = "linkki"routerLink="/kuva" routerLinkActive="active">
-              Kuva-karuselli
-              </a>
-            </div>
-            <div class ="toolbar-linkki3">
-                <a class = "linkki" routerLink="/feedback" routerLinkActive="active">
-                    Feedback
-                    </a>
-                  </div>
-                  
-                </div>
+        <div class="toolbar-linkki">
+          <a class="linkki" routerLink="/reactiveForms" routerLinkActive="active">
+            Reactive Forms
+          </a>
+        </div>
+        <div class="toolbar-linkki">
+          <a class="linkki" routerLink="/news" routerLinkActive="active">
+            News
+          </a>
+        </div>
 
 
 
-          </mat-menu>
+
+      </mat-menu>
     </button>
     <span>Front-End Työkalut</span>
     <span class="example-spacer"></span>
-    
+
   </mat-toolbar>
 </div>
-    

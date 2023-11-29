@@ -11,29 +11,12 @@
     font-weight: 600;
 }
 
-.toolbar-linkki4 {
-    margin-top: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.toolbar-linkki1 {
+.toolbar-linkki {
     margin-top: 20px;
     margin-left: 5px;
     margin-right: 5px;
 }
 
-.toolbar-linkki2 {
-    margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.toolbar-linkki3 {
-    margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
 
 .linkki {
     display: flex;
