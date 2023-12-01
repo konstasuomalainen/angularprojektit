@@ -30,6 +30,7 @@ import { DataService } from './services/data.service';
 import { NewsComponent } from './news/news.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { HttpClientModule } from '@angular/common/http';
+import { NewsHakuPalkkiPipe } from './pipes/news-haku-palkki.pipe';
 
 
 
@@ -48,6 +49,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsComponent,
     ReactiveFormsComponent,
     NewsComponent,
+    NewsHakuPalkkiPipe,
 
    
 

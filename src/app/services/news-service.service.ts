@@ -11,6 +11,7 @@ export class NewsServiceService {
 
   url: string;
   
+  
   newsData1 = [
     { 'Title': 'Ensi-ilta: Palm Springs', 'PublishDate': '2020-11-24T00:00:00', 'HTMLLead': '', 'ImageURL': 'http://media.finnkino.fi/1012/news/6124/PalmSprings_550.jpg' },
     { 'Title': 'Ensi-ilta: Karjamäenjoulu', 'PublishDate': '2020-11-24T00:00:00', 'HTMLLead': '', 'ImageURL': 'http://media.finnkino.fi/1012/news/6123/JulPaKutoppen_550.jpg' }];
@@ -37,10 +38,11 @@ export class NewsServiceService {
         parseString(response,{ trim: true, explicitArray: false, mergeAttrs: true },
           function (err: any, result: any) {
             newsData = result.News.NewsArticle;
+            
           }
           
         );
-
+        
         return newsData;
         console.log(newsData)
       }));
