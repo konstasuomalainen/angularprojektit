@@ -12,9 +12,15 @@
     columns: 3 auto;
     grid-template-columns: 1fr, 1fr, 1fr;
   
- 
-
 }
+.vastaukset
+{
+    display: grid;
+   grid-template-columns: 1fr;
+    height: 50px;
+   
+}
+
 .sisälto
 {
     text-align: center;
@@ -64,6 +70,11 @@
     
     margin: 0rem;
 }
+.python
+{
+    align-items: center;
+    justify-content: center;
+}
 .line
 {
     display: flex;
@@ -84,7 +95,7 @@
  
 }
 
-p{
+p,h2{
     color:grey;
     
     font-family:sans-serif;
