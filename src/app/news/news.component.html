@@ -11,14 +11,17 @@
   </mat-form-field>
 
 </div>
+
 <mat-accordion class="finnkino1" *ngFor="let news of cinemaData | async | newsHakuPalkki: searchText">
 
 
 
   <div class="container">
+    
     <div class="pikku" *ngIf="this.isButtonVisible">
       <img class="pikkukuvat" src={{news.ThumbnailURL}}>
-    </div>
+    
+  </div>
     <div class="panel1">
       <mat-expansion-panel>
 

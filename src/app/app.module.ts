@@ -31,6 +31,7 @@ import { NewsComponent } from './news/news.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { HttpClientModule } from '@angular/common/http';
 import { NewsHakuPalkkiPipe } from './pipes/news-haku-palkki.pipe';
+import { SortByOrderPipe } from './pipes/sort-by-order.pipe';
 
 
 
@@ -50,6 +51,7 @@ import { NewsHakuPalkkiPipe } from './pipes/news-haku-palkki.pipe';
     ReactiveFormsComponent,
     NewsComponent,
     NewsHakuPalkkiPipe,
+    SortByOrderPipe,
 
    
 

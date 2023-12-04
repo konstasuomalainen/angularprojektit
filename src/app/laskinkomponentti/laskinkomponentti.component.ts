@@ -31,21 +31,24 @@ export class LaskinkomponenttiComponent {
 
   addValue(value: any)
   {
+
     
       if (value >= "0" && value <= "9")
       {
       this.ratkaisu = this.ratkaisu + value
       this.result = this.ratkaisu
-      this.resultPrev = ""
-      console.log(this.ratkaisu)
+     
+      
+      
       
       }
+     
     
       else if (value == 'C')
       {
        this.result = ""
        this.ratkaisu = ""
-        console.log(this.ratkaisu)
+       
 
       }
       else if (value == '/')
@@ -53,7 +56,7 @@ export class LaskinkomponenttiComponent {
         this.ratkaisu = this.ratkaisu + value
         this.result = value
         
-        console.log(this.ratkaisu)
+       
 
       }
       else if (value == '*')
@@ -61,7 +64,7 @@ export class LaskinkomponenttiComponent {
         this.ratkaisu = this.ratkaisu + value
         this.result = value
         
-        console.log(this.ratkaisu)
+       
 
       }
       else if (value == '-')
@@ -69,7 +72,7 @@ export class LaskinkomponenttiComponent {
         this.ratkaisu = this.ratkaisu + value
         this.result = value
         
-        console.log(this.ratkaisu)
+        
 
       }
       else if (value == '+')
@@ -77,7 +80,7 @@ export class LaskinkomponenttiComponent {
         this.ratkaisu = this.ratkaisu + value
         this.result = value
         
-        console.log(this.ratkaisu)
+        
 
       }
       else if (value == '=')
@@ -85,9 +88,11 @@ export class LaskinkomponenttiComponent {
         this.ratkaisu = eval(this.ratkaisu)
         this.result = this.ratkaisu
         
-        console.log(this.ratkaisu)
+        
 
       }
+      
+      
     
   }
     

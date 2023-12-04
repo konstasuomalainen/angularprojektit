@@ -1,20 +1,26 @@
+
 <div class="container">
-<h1>Calculator</h1>
+  <div class="header">
+    <h1 class = "otsikko">Calculator</h1>
+  </div>
+
+<div class="result1">
+  <p class = "result">{{result}}<p>
+  
+  </div>
 <mat-grid-list class="gridlist" cols="4" >
+  
     <mat-grid-tile class ="tile" 
     *ngFor="let button of buttons"
  
     >
-        <button mat-raised-button  (click)="addValue(button)">{{button}}</button>
+        <button class="button1" mat-raised-button  (click)="addValue(button)">{{button}}</button>
     </mat-grid-tile>
     
   </mat-grid-list>
 
 
-<div>
-<div class="result1">
-<p class = "result">{{result}}<p>
-</div>
-</div>
+
+
 </div>
     

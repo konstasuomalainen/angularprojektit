@@ -1,28 +1,79 @@
-<section class="section">
+<div class = "containerr">
+<div id="text" >
 
-    <h1>Welcome!</h1>
+    <div class="line">
+        <p class="word fancy1">Konsta </p>
+        <p class="word fancy1">Suomalainen</p>
 
-</section>
-<section class="section">
 
-    <h1>I am</h1>
 
-</section>
-<section class="section">
+    </div>
+    <div class="line">
+        <p class="word fancy2">Business information</p>
 
-    <h1>Konsta Suomalainen</h1>
+        <p class="word fancy2">at</p>
 
-</section>
+    </div>
+    <div class="line">
 
-<section class="section">
+        <p class="word fancy2">LAB University</p>
+        <p class="word fancy2">of</p>
+        <p class="word fancy2">Applied Sciences</p>
+    </div>
+    <div class="line">
+        <p class="word fancy3">My most used coding</p>
+        <p class="word fancy3">languages:</p>
 
-    <h1>Studying Business Information Technology at LAB University of Applied Sciences</h1>
-    <h1>Intermediate in C#, Angular, TypeScript</h1>
+    </div>
+    <div class="line">
+        <p class="word fancy3">Angular</p>
+        <p class="word fancy3">C#,</p>
+    </div>
+    <div class="line">
+        <p class="word fancy3">&</p>
+        <p class="word fancy3">TypeScript</p>
+    </div>
 
-</section>
+    <div   class="line">
+        <p class="word fancy8">Also have experience</p>
+        <p class="word fancy8">of</p>
+    </div>
+    <div   class="line">
+        <p (mouseenter)="hideImg()" (mouseleave)="hideImg()" class="word fancy8">Python,</p>
+        <p class="word fancy8">SQL</p>
+        <p class="word fancy8">&</p>
+        <p class="word fancy8">MS POWER AUTOMATE</p>
+    </div>
 
-<section class="section">
 
-    <img class = "kuva" src="https://media.licdn.com/dms/image/D4D03AQH1D2YJuJ0_mw/profile-displayphoto-shrink_400_400/0/1697130364027?e=1706745600&v=beta&t=q_157qWZuo66DQZ4AGbB_Y6pUH7rPubZywu1LkNz2T8" alt="">
 
-</section>
+
+
+
+
+    
+</div>
+<div *ngIf="this.isButtonVisible" class="python">
+    <p class="sisalto">
+        Lounaslista Bot GoForelle
+    </p>
+</div>
+
+
+
+ <div  class = "container1" >
+
+   <div class="grid" *ngFor="let striimi of striimit | sortByOrder">
+    <button class = "button1">
+    <h2 class = "sisälto">{{striimi.Title}}</h2>
+    <h2 class = "sisälto">{{striimi.order}}</h2>
+</button>
+   </div>
+
+
+
+
+
+ </div>
+
+

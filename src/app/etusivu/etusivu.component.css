@@ -2,29 +2,145 @@
 {
     background-color: black;
 }
+
 .body
 {
     background-color: black;
 }
-
-
-
-section {
- 
-  display: grid;
-  align-items: center;
+.container1
+{
+    columns: 3 auto;
+    grid-template-columns: 1fr, 1fr, 1fr;
   
-  min-height: 100vh;
+ 
+
 }
-h1
+.sisälto
 {
     text-align: center;
+    margin: 0;
+       
+    }
+
+.grid
+{
+    
+    justify-content: space-between;
+    flex-wrap:wrap;
+    border: 3px solid rgb(59, 52, 52);
+    border-radius: 25px;
+}
+
+.button1
+{
+    border-radius: 25px;
+    width:135.600px;
+    transition: all 0.3s;
+    background-color: black;
+    padding: 0;
+    border: 0;
+    color: white;
+}
+.button1:hover
+{
+    transform: translateY(-10px);
+    background-color: rgb(45, 45, 45);
+}
+.h1
+{
+  
+  text-align: center;
+  
+}
+.containerr
+{
+   display: grid;
+   grid-template-columns: 1fr, 1fr, 1fr;
+    padding: 0rem;
+    width:700px ;
+    height: 100svh;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 0rem;
+}
+.line
+{
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+   
+    
+}
+#text
+{
+   
+    margin: auto;
+    margin-top: 10%;
+    
+    
+    width: min-content;
+   
+ 
+}
+
+p{
+    color:grey;
+    
+    font-family:sans-serif;
+    margin: 0rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    
+}
+
+.word
+{
+   
 }
 .kuva
 {
     margin-left: auto;
     margin-right: auto;
    
+}
+#text:hover
+{
+    cursor:url("cursor.png"),auto;
+    
+}
+
+
+#text:has(.fancy1:hover) .word:not(.fancy1)
+{
+opacity: 0.2;;
+}
+
+#text:has(.fancy2:hover) .word:not(.fancy2)
+{
+opacity: 0.2;
+
+}
+
+
+
+
+#text:has(.fancy3:hover) .word:not(.fancy3)
+{
+opacity: 0.2;
+
+}
+
+#text:has(.fancy8:hover) .word:not(.fancy8)
+{
+opacity: 0.2;
+
+
+}
+#text:has(.fancy:hover) .word:not(.fancy:hover)
+{
+opacity: 0.2;;
 }
 
 
