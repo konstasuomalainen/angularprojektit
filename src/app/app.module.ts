@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AngularFireModule} from '@angular/fire/compat'
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,10 +35,16 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { HttpClientModule } from '@angular/common/http';
 import { NewsHakuPalkkiPipe } from './pipes/news-haku-palkki.pipe';
 import { SortByOrderPipe } from './pipes/sort-by-order.pipe';
+import { LoginpagesComponent } from './adminsite/loginpages/loginpages.component';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
-
-
-
+import { ModuleWithProviders } from '@angular/core';
+import { AuthServiceService } from './services/auth-service.service';
+import { myGuardGuard } from './my-guard.guard';
+import { TicketBuyComponent } from './ticket-buy/ticket-buy.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 
 @NgModule({
@@ -53,10 +62,21 @@ import { SortByOrderPipe } from './pipes/sort-by-order.pipe';
     NewsHakuPalkkiPipe,
     SortByOrderPipe,
 
+    LoginpagesComponent,
+     TicketBuyComponent,
+
    
 
   ],
   imports: [
+
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(
+      environment.firebase, 'angular-auth-firebase') as
+      ModuleWithProviders<AngularFireModule>,
+      
+  
+    
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -76,7 +96,10 @@ import { SortByOrderPipe } from './pipes/sort-by-order.pipe';
     ReactiveFormsModule,
     MatCheckboxModule,
     MatExpansionModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSlideToggleModule,
+    
+    
 
     
     
@@ -84,8 +107,9 @@ import { SortByOrderPipe } from './pipes/sort-by-order.pipe';
     
     
   ],
-  providers: [DataService
-  
+  providers: [DataService,
+    AuthServiceService,
+    myGuardGuard
   ],
   bootstrap: [AppComponent]
 })

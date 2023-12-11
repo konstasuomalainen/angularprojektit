@@ -11,6 +11,12 @@
     font-weight: 600;
 }
 
+.login
+{
+    right: 0;
+    position: absolute;
+}
+
 #matMenu
 {
     

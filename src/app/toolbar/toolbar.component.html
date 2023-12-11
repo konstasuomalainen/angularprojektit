@@ -1,5 +1,6 @@
 <div>
   <mat-toolbar class="toolbar">
+    
     <button mat-button [matMenuTriggerFor]="menu" >
       <mat-icon>menu</mat-icon>
       <mat-menu class="sisältö1" #menu="matMenu" >
@@ -41,6 +42,11 @@
             News
           </a>
         </div>
+        <div class="toolbar-linkki">
+          <a class="linkki" routerLink="/ticket" routerLinkActive="active">
+            Tickets
+          </a>
+        </div>
         </div>
 
 
@@ -49,6 +55,10 @@
     </button>
     <span>Front-End Työkalut</span>
     <span class="example-spacer"></span>
+   
+    <button routerLink="/login" routerLinkActive="active" class = "login" mat-button  >Sign In
 
+    </button>
+    
   </mat-toolbar>
 </div>

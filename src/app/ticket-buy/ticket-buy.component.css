@@ -1,0 +1,58 @@
+.container1
+{
+    background-color: white;
+    width: 100vh;
+    margin: 0;
+    
+    
+}
+.container2
+{
+    background-color: white;
+    width: 100vh;
+    margin-left: 15px;
+    
+}
+.kysely
+{
+   margin: auto;
+   
+}
+.tiedot
+{
+    width: 100vh;
+    background-color: white;
+    border-top: 2px solid rgb(0, 0, 0);
+  
+}
+.example-full-width-1
+{
+   margin-left: 10px;
+   width: 10cm;
+}
+.example-full-width
+{
+   width: 10cm;
+   
+}
+
+.total
+{
+  
+}
+
+.button1
+{
+    width: 100vh;
+    
+}
+.button2
+{
+   
+}
+.button2:active
+{
+    
+    background-color: rgb(255, 2, 2);
+}
+

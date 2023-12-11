@@ -1,0 +1,119 @@
+<div class="container1">
+<div class = "kysely"  *ngFor = "let ticket1 of tickets1">
+    <div class = kysely-otsikko>
+
+    
+    <h2 class = "header-topic">
+        {{ticket1.header}}
+    </h2>
+    </div>
+    <div class = kysely-sisältö>
+
+    <div class = "sliderit">
+    <mat-slider  (click)="calculate()" (change) ="values1(ticket1)" class = "slider" min="0" max="5" step="1" (input) = "onInputChange($event,ticket1)" >
+        <input matSliderThumb>
+       </mat-slider>
+    </div>
+    
+    </div>
+    <div class = kysely-vastaus-div>
+    <h3 class = "kysely-vastaus">
+     {{ticket1.answer}} kpl
+    </h3>
+
+</div>
+<div class = "kysely" *ngFor = "let ticket2 of tickets2">
+    <div class = kysely-otsikko>
+
+    
+    <h2 class = "header-topic">
+        {{ticket2.header}}
+    </h2>
+    </div>
+    <div class = kysely-sisältö>
+
+    <div class = "sliderit">
+    <mat-slider  (click)="calculate()"(change) ="values2(ticket2)" class = "slider" min="0" max="5" step="1" (input) = "onInputChange($event,ticket2)" >
+        <input matSliderThumb>
+       </mat-slider>
+    </div>
+    
+    </div>
+    <div class = kysely-vastaus-div>
+    <h3 class = "kysely-vastaus">
+     {{ticket2.answer}} kpl
+    
+    </h3>
+
+</div>
+<div class = "kysely" *ngFor = "let ticket3 of tickets3">
+    <div class = kysely-otsikko>
+
+    
+    <h2 class = "header-topic">
+        {{ticket3.header}}
+    </h2>
+    </div>
+    <div class = kysely-sisältö>
+
+    <div class = "sliderit">
+    <mat-slider (click)="calculate()" (change) ="values3(ticket3)"class = "slider" min="0" max="5" step="1" (input) = "onInputChange($event,ticket3)" >
+        <input matSliderThumb>
+       </mat-slider>
+    </div>
+    
+    </div>
+    <div class = kysely-vastaus-div>
+    <h3 class = "kysely-vastaus">
+     {{ticket3.answer}} kpl
+     
+    </h3>
+
+</div>
+</div>
+
+<mat-slide-toggle  [checked]="inputCheck" (click) = "toggleChanges()">MTK:n jäsen</mat-slide-toggle>
+
+<div class="button1">
+    
+    <p class="total">
+        Yhteensä: {{this.kokonaistulos}} €
+    </p>
+</div>
+
+<div class="tiedot">
+    <form [formGroup]="profileFormi" (ngSubmit)="OnBuy()" class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Etunimi</mat-label>
+      <input  matInput placeholder="First name" formControlName="firstName">
+      <mat-error *ngIf="firstName?.hasError('required')">Enter your first name</mat-error>
+        <mat-error *ngIf="firstName?.hasError('minlength')">Minimum 2 characters</mat-error>
+        <mat-error *ngIf="firstName?.hasError('pattern')">Must be valid name</mat-error>
+      
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Sukunimi</mat-label>
+          <input matInput placeholder="Last name" formControlName="lastName" >
+          <mat-error *ngIf="lastName?.hasError('required')">Enter your last name</mat-error>
+            <mat-error *ngIf="lastName?.hasError('minlenght')">Minimum 2 characters</mat-error>
+            <mat-error *ngIf="lastName?.hasError('pattern')">Must be valid name</mat-error>
+        </mat-form-field>
+    
+  
+  
+
+      <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" formControlName="email">
+          <mat-error *ngIf="email?.hasError('required')">Enter your email</mat-error>
+          <mat-error *ngIf="email?.hasError('minlength')">Minimum 3 characters</mat-error>
+          <mat-error *ngIf="email?.hasError('email')">Input valid email</mat-error>
+          </mat-form-field>
+          <div>
+
+          
+          <button class = "button2" type="submit"(click)="buy(profileFormi.value)" (click)="calculate()" mat-raised-button color="primary">Osta liput</button>
+        </div>
+</form>
+</div>
+
