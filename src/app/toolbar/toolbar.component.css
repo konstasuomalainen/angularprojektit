@@ -14,7 +14,9 @@
 .login
 {
     right: 0;
+   
     position: absolute;
+    font-size: small;
 }
 
 #matMenu

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthServiceService } from 'src/app/services/auth-service.service';
 import { Router } from "@angular/router";
+import { ToolbarComponent } from 'src/app/toolbar/toolbar.component';
 
 @Component({
   selector: 'app-loginpages',
@@ -23,11 +24,14 @@ export class LoginpagesComponent {
       
   
     });
+   
     
   }
+
   login(value:any)
   {
     this.authenticationService.login(value)
+   
     console.log(value.email)
     console.log(value.passWord)
   

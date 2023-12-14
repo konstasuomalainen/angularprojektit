@@ -19,7 +19,16 @@ export class AuthServiceService {
       let userEmail =user?.email as string;
   });
   }
-  
+  logOut()
+  {
+    return this.auth.signOut().then(() =>
+    {
+      this.userEmail.next("")
+    
+      this.router.navigate(['etusivu'])
+    })
+    
+  }
   
   login(value:any) {
     return (this.auth.signInWithEmailAndPassword(
@@ -43,7 +52,7 @@ export class AuthServiceService {
   }
   checkLoggedin()
   {
-    return this.userEmail
+    return this.userEmail;
     
   }
 }

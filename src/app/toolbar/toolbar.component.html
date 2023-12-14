@@ -55,10 +55,15 @@
     </button>
     <span>Front-End Työkalut</span>
     <span class="example-spacer"></span>
-   
-    <button routerLink="/login" routerLinkActive="active" class = "login" mat-button  >Sign In
+    <div class = "login">
 
-    </button>
     
+    
+   
+    <button  routerLink="/login" routerLinkActive="active" mat-button *ngIf="checkLoggedIn()">Sign in</button>
+
+    <button (click) = "logOut()"  mat-button *ngIf="checkLoggedIn()" >Sign out</button>
+    <p class = "" *ngIf="checkLoggedIn()">{{this.email| async}}</p>
+  </div>
   </mat-toolbar>
 </div>
