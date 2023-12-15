@@ -12,7 +12,7 @@ import { ToolbarComponent } from 'src/app/toolbar/toolbar.component';
 export class LoginpagesComponent {
   profileForm: FormGroup;
   
-  
+  hide = true;
   constructor(private authenticationService: AuthServiceService,
     private formBuilder: FormBuilder,
     private router: Router,)  {

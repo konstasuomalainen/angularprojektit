@@ -59,10 +59,10 @@
 
     
     
-   
+      <button (click) = "logOut()"  mat-button *ngIf="this.isButtonVisible" >Sign out</button>
     <button  routerLink="/login" routerLinkActive="active" mat-button *ngIf="checkLoggedIn()">Sign in</button>
 
-    <button (click) = "logOut()"  mat-button *ngIf="checkLoggedIn()" >Sign out</button>
+    
     <p class = "" *ngIf="checkLoggedIn()">{{this.email| async}}</p>
   </div>
   </mat-toolbar>
